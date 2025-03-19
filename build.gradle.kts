@@ -31,7 +31,6 @@ loom {
     mods {
         create("template") {
             sourceSet(sourceSets["main"])
-            sourceSet(sourceSets["client"])
         }
     }
 }
@@ -46,18 +45,10 @@ repositories {
 }
 
 dependencies {
-    fun fapi(vararg modules: String) = modules.forEach {
-        modImplementation(fabricApi.module(it, deps["fabric_api"]))
-    }
-
     minecraft("com.mojang:minecraft:$mcVersion")
     mappings("net.fabricmc:yarn:$mcVersion+build.${deps["yarn_build"]}:v2")
     modImplementation("net.fabricmc:fabric-loader:${deps["fabric_loader"]}")
-
-    fapi(
-        // Add modules from https://github.com/FabricMC/fabric
-        "fabric-lifecycle-events-v1",
-    )
+    modImplementation("net.fabricmc.fabric-api:fabric-api:${deps["fabric_api"]}")
 }
 
 loom {

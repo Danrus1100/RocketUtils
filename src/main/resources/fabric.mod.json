@@ -3,31 +3,24 @@
   "id": "${id}",
   "version": "${version}",
   "name": "${name}",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "CHANGE THIS TO YOUR MOD DESCRIPTION",
   "authors": [
-    "Me!"
+    "Danrus110_"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
-  "license": "CC0-1.0",
+  "license": "LGPL v3",
   "icon": "assets/template/icon.png",
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
-    "main": [
-      "com.example.TemplateMod"
-    ],
     "client": [
-      "com.example.TemplateModClient"
+      "com.danrus.svr.SaveYourRockets"
     ]
   },
   "mixins": [
-    "template.mixins.json",
-    {
-      "config": "template.client.mixins.json",
-      "environment": "client"
-    }
+    "svr.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.15",
