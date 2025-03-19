@@ -3,7 +3,7 @@
   "id": "${id}",
   "version": "${version}",
   "name": "${name}",
-  "description": "CHANGE THIS TO YOUR MOD DESCRIPTION",
+  "description": "ПОМЕНЯЙ МЕНЯ!!! ПОМЕНЯЙ МЕНЯ!!! ПОМЕНЯЙ МЕНЯ!!!",
   "authors": [
     "Danrus110_"
   ],
@@ -12,11 +12,14 @@
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
   "license": "LGPL v3",
-  "icon": "assets/template/icon.png",
+  "icon": "assets/srv/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
-      "com.danrus.svr.SaveYourRockets"
+      "com.danrus.svr.client.SaveYourRockets"
+    ],
+    "modmenu": [
+      "com.danrus.svr.client.ModMenuIntegration"
     ]
   },
   "mixins": [
