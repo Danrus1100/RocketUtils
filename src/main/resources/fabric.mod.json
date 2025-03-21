@@ -3,20 +3,21 @@
   "id": "${id}",
   "version": "${version}",
   "name": "${name}",
-  "description": "ПОМЕНЯЙ МЕНЯ!!! ПОМЕНЯЙ МЕНЯ!!! ПОМЕНЯЙ МЕНЯ!!!",
+  "description": "Adds some features to use rockets better.",
   "authors": [
     "Danrus110_"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://modrinth.com/mod/rocket-utils",
+    "sources": "https://github.com/Danrus1100/RocketUtils",
+    "issues": "https://github.com/Danrus1100/RocketUtils/issues"
   },
   "license": "LGPL v3",
   "icon": "assets/srv/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
-      "com.danrus.svr.client.SaveYourRockets"
+      "com.danrus.svr.client.RocketUtils"
     ],
     "modmenu": [
       "com.danrus.svr.client.ModMenuIntegration"

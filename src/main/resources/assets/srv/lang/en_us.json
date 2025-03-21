@@ -1,0 +1,9 @@
+{
+  "category.svr.keybinds": "Rocket Utils",
+  "key.svr.toggle": "Toggle",
+
+  "config.svr.title": "Rocket Utils Config",
+  "config.svr.category.general": "General",
+  "config.svr.disable_interaction": "Disable Interaction With Rockets",
+  "config.svr.disable_interaction.description": "Doesn't allow you to use the rocket in your hand"
+}
