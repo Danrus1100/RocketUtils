@@ -26,14 +26,7 @@ group = mod.group
 base { archivesName.set(mod.id) }
 
 loom {
-    splitEnvironmentSourceSets()
 
-    mods {
-        create("template") {
-            sourceSet(sourceSets["main"])
-            sourceSet(sourceSets["client"])
-        }
-    }
 }
 
 repositories {
@@ -41,23 +34,29 @@ repositories {
         forRepository { maven(url) { name = alias } }
         filter { groups.forEach(::includeGroup) }
     }
+    maven("https://maven.isxander.dev/releases") {
+        name = "Xander Maven"
+    }
+    maven("https://maven.terraformersmc.com/") {
+        name = "Terraformers"
+    }
+    maven("https://maven.nucleoid.xyz/") {
+        name = "Nucleoid"
+    }
     strictMaven("https://www.cursemaven.com", "CurseForge", "curse.maven")
     strictMaven("https://api.modrinth.com/maven", "Modrinth", "maven.modrinth")
 }
 
 dependencies {
-    fun fapi(vararg modules: String) = modules.forEach {
-        modImplementation(fabricApi.module(it, deps["fabric_api"]))
-    }
-
     minecraft("com.mojang:minecraft:$mcVersion")
     mappings("net.fabricmc:yarn:$mcVersion+build.${deps["yarn_build"]}:v2")
     modImplementation("net.fabricmc:fabric-loader:${deps["fabric_loader"]}")
-
-    fapi(
-        // Add modules from https://github.com/FabricMC/fabric
-        "fabric-lifecycle-events-v1",
-    )
+    modImplementation("net.fabricmc.fabric-api:fabric-api:${deps["fabric_api"]}")
+    modImplementation("dev.isxander:yet-another-config-lib:${deps["yacl_version"]}")
+    modImplementation("com.terraformersmc:modmenu:${deps["modmenu_version"]}")
+    if (mcVersion == "1.20.4") {
+        modImplementation("eu.pb4:placeholder-api:2.4.0-pre.1+1.20.4")
+    }
 }
 
 loom {

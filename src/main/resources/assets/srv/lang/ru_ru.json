@@ -1,0 +1,9 @@
+{
+  "category.svr.keybinds": "Rocket Utils",
+  "key.svr.toggle": "Переключить",
+
+  "config.svr.title": "Конфигурация Rocket Utils",
+  "config.svr.category.general": "Основные",
+  "config.svr.disable_interaction": "Отключить Взаимодействие с Ракетами",
+  "config.svr.disable_interaction.description": "Не позволяет использовать ракету в руке"
+}

@@ -3,31 +3,28 @@
   "id": "${id}",
   "version": "${version}",
   "name": "${name}",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Adds some features to use rockets better.",
   "authors": [
-    "Me!"
+    "Danrus110_"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://modrinth.com/mod/rocket-utils",
+    "sources": "https://github.com/Danrus1100/RocketUtils",
+    "issues": "https://github.com/Danrus1100/RocketUtils/issues"
   },
-  "license": "CC0-1.0",
-  "icon": "assets/template/icon.png",
-  "environment": "*",
+  "license": "LGPL v3",
+  "icon": "assets/srv/icon.png",
+  "environment": "client",
   "entrypoints": {
-    "main": [
-      "com.example.TemplateMod"
-    ],
     "client": [
-      "com.example.TemplateModClient"
+      "com.danrus.svr.client.RocketUtils"
+    ],
+    "modmenu": [
+      "com.danrus.svr.client.ModMenuIntegration"
     ]
   },
   "mixins": [
-    "template.mixins.json",
-    {
-      "config": "template.client.mixins.json",
-      "environment": "client"
-    }
+    "svr.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.15",
