@@ -1,7 +1,7 @@
 package com.danrus.svr.client.mixin;
 
 import com.danrus.svr.client.config.ModConfig;
-import com.danrus.svr.client.utils.GrassUtils;
+import com.danrus.svr.client.utils.BlockUtils;
 import com.danrus.svr.client.utils.PlayerUtils;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -30,7 +30,7 @@ public interface BlockViewMixin {
     private void blockFactoryMixin(RaycastContext innerContext, BlockPos pos, CallbackInfoReturnable<BlockHitResult> cir) {
         Block block = this.getBlockState(pos).getBlock();
         if (
-                GrassUtils.isGrassBlock(block)
+                BlockUtils.isGrassBlock(block)
                 && PlayerUtils.isPlayerHoldingRocket()
                 && ModConfig.get().isInteractionWithGrassDisabled
         ) {

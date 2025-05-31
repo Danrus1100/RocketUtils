@@ -16,4 +16,10 @@ public class PlayerUtils {
         return mc.player.getMainHandStack().getItem() == Items.FIREWORK_ROCKET ||
                mc.player.getOffHandStack().getItem() == Items.FIREWORK_ROCKET;
     }
+
+    public static boolean isPlayerGlide() {
+        MinecraftClient mc = MinecraftClient.getInstance();
+        assert mc.player != null;
+        return mc.player.isGliding();
+    }
 }

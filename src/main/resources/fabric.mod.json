@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "${id}",
-  "version": "${version}",
+  "version": "${version}-MC-${minecraft_version}",
   "name": "${name}",
   "description": "Adds some features to use rockets better.",
   "authors": [
@@ -15,6 +15,7 @@
   "license": "LGPL v3",
   "icon": "assets/srv/icon.png",
   "environment": "client",
+  "accessWidener": "aws/${minecraft_version}.accesswidener",
   "entrypoints": {
     "client": [
       "com.danrus.svr.client.RocketUtils"

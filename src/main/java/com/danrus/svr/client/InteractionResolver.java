@@ -1,6 +1,7 @@
 package com.danrus.svr.client;
 
 import com.danrus.svr.client.config.ModConfig;
+import com.danrus.svr.client.utils.BlockUtils;
 import com.danrus.svr.client.utils.PlayerUtils;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -24,7 +25,7 @@ public class InteractionResolver {
         ItemStack itemStack = player.getStackInHand(hand);
         if (itemStack.isOf(Items.FIREWORK_ROCKET)) {
             Block block = world.getBlockState(blockHitResult.getBlockPos()).getBlock();
-            if (block == Blocks.CHEST) {
+            if (BlockUtils.isInteractableBlock(block)) {
                 return ActionResult.PASS;
             } else {
                 return ActionResult.FAIL;

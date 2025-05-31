@@ -3,13 +3,6 @@
 <a href="https://modrinth.com/mod/rocket-utils">
 <img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg">
 </a>
-<a href="https://www.curseforge.com/minecraft/mc-mods/rocket-utils">
-<img alt="curseforge" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/curseforge_vector.svg">
-</a>
-</center>
-</p>
-<p>
-<center>
 <a href="https://modrinth.com/mod/fabric-api">
 <img alt="fabric-api" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/requires/fabric-api_vector.svg">
 </a>
