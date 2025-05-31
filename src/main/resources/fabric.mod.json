@@ -20,7 +20,7 @@
       "com.danrus.svr.client.RocketUtils"
     ],
     "modmenu": [
-      "com.danrus.svr.client.ModMenuIntegration"
+      "com.danrus.svr.client.config.ModMenuIntegration"
     ]
   },
   "mixins": [

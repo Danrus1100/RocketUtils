@@ -96,10 +96,12 @@ tasks.processResources {
     filesMatching("fabric.mod.json") { expand(map) }
 }
 
+val modVersion = mod.version
+
 tasks.register<Copy>("buildAndCollect") {
     group = "build"
     from(tasks.remapJar.get().archiveFile)
-    into(rootProject.layout.buildDirectory.file("libs/${mod.version}"))
+    into(rootProject.layout.buildDirectory.file("libs/$modVersion"))
     dependsOn("build")
 }
 

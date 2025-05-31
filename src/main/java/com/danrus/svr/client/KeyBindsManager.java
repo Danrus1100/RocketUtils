@@ -1,9 +1,13 @@
 package com.danrus.svr.client;
 
+import com.danrus.svr.client.config.ModConfig;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import org.lwjgl.glfw.GLFW;
 
 public class KeyBindsManager {
@@ -22,8 +26,17 @@ public class KeyBindsManager {
 
     public static void handleKeyPress (MinecraftClient minecraftClient) {
         if (toggleKeyBinding.wasPressed()) {
-            ModConfig.get().isModEnabled = !ModConfig.get().isModEnabled;
+            ModConfig.get().isInteractionDisabled = !ModConfig.get().isInteractionDisabled;
             ModConfig.save();
+            assert minecraftClient.player != null;
+            minecraftClient.player.playSound(SoundEvents.UI_BUTTON_CLICK.value(), 0.5F, 1.0F);
+//            minecraftClient.inGameHud.setOverlayMessage(Text.translatable((ModConfig.get().isInteractionDisabled ? " disabled" : " enabled")).formatted(), false);
+            minecraftClient.inGameHud.setOverlayMessage(
+                    ModConfig.get().isInteractionDisabled ?
+                            Text.translatable("key.svr.interaction_disabled").formatted(Formatting.RED) :
+                            Text.translatable("key.svr.interaction_enabled").formatted(Formatting.GREEN),
+                    false
+            );
         }
     }
 }

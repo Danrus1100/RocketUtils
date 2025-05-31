@@ -2,8 +2,15 @@
   "category.svr.keybinds": "Rocket Utils",
   "key.svr.toggle": "Переключить",
 
+  "key.svr.interaction_enabled": "Взаимодействие Включено",
+  "key.svr.interaction_disabled": "Взаимодействие Выключено",
+
   "config.svr.title": "Конфигурация Rocket Utils",
   "config.svr.category.general": "Основные",
+
   "config.svr.disable_interaction": "Отключить Взаимодействие с Ракетами",
-  "config.svr.disable_interaction.description": "Не позволяет использовать ракету в руке"
+  "config.svr.disable_interaction.description": "Не позволяет использовать ракету в руке когда вы НЕ крадётесь",
+
+  "config.svr.disable_grass_interaction": "Отключить Взаимодейстиве с Травой",
+  "config.svr.disable_grass_interaction.description": "Выключает взаимодействие с травой и подобными блоками, когда ракета в руках"
 }

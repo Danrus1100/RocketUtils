@@ -1,7 +1,10 @@
 package com.danrus.svr.client;
 
+import com.danrus.svr.client.config.ModConfig;
+import com.danrus.svr.client.utils.PlayerUtils;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -12,7 +15,9 @@ import net.minecraft.util.ActionResult;
 
 public class InteractionResolver {
     public static ActionResult resolve(PlayerEntity player, World world, Hand hand, BlockHitResult blockHitResult) {
-        if (!ModConfig.get().isModEnabled) {
+        assert MinecraftClient.getInstance().player != null;
+
+        if (!ModConfig.get().isInteractionDisabled || PlayerUtils.isPlayerSneaking()) {
             return ActionResult.PASS;
         }
 

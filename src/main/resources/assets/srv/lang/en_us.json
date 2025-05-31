@@ -2,8 +2,15 @@
   "category.svr.keybinds": "Rocket Utils",
   "key.svr.toggle": "Toggle",
 
+  "key.svr.interaction_enabled": "Interaction Enabled",
+  "key.svr.interaction_disabled": "Interaction Disabled",
+
   "config.svr.title": "Rocket Utils Config",
   "config.svr.category.general": "General",
+
   "config.svr.disable_interaction": "Disable Interaction With Rockets",
-  "config.svr.disable_interaction.description": "Doesn't allow you to use the rocket in your hand"
+  "config.svr.disable_interaction.description": "Doesn't allow you to use the rocket in your hand when you NOT sneaking",
+
+  "config.svr.disable_grass_interaction": "Disable Interaction With Grass",
+  "config.svr.disable_grass_interaction.description": "Disables interaction collision with grass and similar blocks when rocket in the hands"
 }
